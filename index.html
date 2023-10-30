@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="ifood.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/validationEngine.jquery.min.css" type="text/css" />
+    <title>Porjeto Ifood - 30/10/2023</title>
+</head>
+<body>
+    <main>
+        <div id="centraliza">
+            <section id="ifood">
+            <form action="ifood.php" id="form-ifood" method="post">
+
+            <h1 style="text-align: center; margin: 30px;">Tela de Cadastro - APP</h1>
+            <div id="form-ifood-grid">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome:" required>
+                </div>
+                <div>
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome:" required>
+                </div>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Email:" required>
+                </div>
+                <div>
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" name="telefone" id="telefone" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{4,5}" placeholder="Telefone:" required>
+                </div>
+                <div>
+                    <label for="endereco">Seu Endereço:</label>
+                    <input type="text" name="endereco" id="endereco" placeholder="Endereço:" required>
+                </div>
+                <div class="date">
+                    <label for="data_nascimento">Data de Nascimento:</label>
+                    <input type="date" name="data_nascimento" id="data_nascimento" required>
+                </div>
+            </div>
+                <div>
+                    <button class="btn-enviar-agenda" type="submit">Cadastrar</button>
+                </div>
+            </form>
+            </section>
+        </div>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/languages/jquery.validationEngine-en.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+        $("#telefone, #celular").mask("(00) 0000-0000");
+    </script>
+
+</body>
+</html>
